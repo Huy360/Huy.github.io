@@ -19,13 +19,13 @@ body {
 /* || typography */
 
 h1, h2, h3 {
-  font-family: 'Cinzel Decorative', cursive;
+  font-family: 'Times New Roman', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   color: #2a2a2a;
 }
 
 p, input, li {
-  font-family: 'Roboto Condensed', sans-serif;
-  color: #2a2a2a;
+  font-family: 'Lobster', Cyreal;
+  color: #0e0f61;
 }
 
 h1 {
