@@ -25,7 +25,7 @@ h1, h2, h3 {
 
 p, input, li {
   font-family: 'Lobster', Cyreal;
-  color: #010307;
+  color: #2a2a2a;
 }
 
 h1 {
@@ -57,12 +57,12 @@ header {
 }
 
 body > * {
-  background-color: blue;
+  background-color: rgba(0, 60, 255, 0.822);
   padding: 1%;
 }
 
 main, header, nav, article, aside, footer, section {
-  background-color: rgba(48, 20, 202, 0.5);
+  background-color: rgba(20, 32, 202, 0.808);
   padding: 1%;
 }
 
