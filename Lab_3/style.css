@@ -57,12 +57,12 @@ header {
 }
 
 body > * {
-  background-color: rgba(0, 60, 255, 0.822);
+  background-color: rgba(19, 84, 204, 0.479);
   padding: 1%;
 }
 
 main, header, nav, article, aside, footer, section {
-  background-color: rgba(20, 32, 202, 0.808);
+  background-color:rgba(10, 94, 213, 0.5);
   padding: 1%;
 }
 
