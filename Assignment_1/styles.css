@@ -1,1 +1,8 @@
-
+body{
+    background-color: chartreuse;
+}
+header{
+margin-bottom: 15px;
+display: flex;
+background-color: cyan;
+}
