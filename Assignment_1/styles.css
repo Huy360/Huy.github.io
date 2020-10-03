@@ -1,11 +1,13 @@
-body {background-color: rgba(0, 86, 111, 1);}
+body {
+  background-color: rgb(0, 111, 55);
+}
 
 .header
  {
    /* Typography*/
-  background:rgba(215, 147, 0, 0.67); /* Header Bckg Color */
-  font-family: 'Rammetto One', cursive; /* Sets font of text */
-  color: white; /* Text color */
+  background:rgba(215, 0, 0, 0.67); 
+  font-family: 'Rammetto One', cursive; 
+  color: black; 
   padding: 15px;
   font-size: 50 px;
   font-weight: 650;
@@ -74,5 +76,5 @@ body {background-color: rgba(0, 86, 111, 1);}
   padding: 30px;
   background: white;
   /* margin-bottom: 115px; */
-  color: #A85211;
+  color: rgb(17, 168, 55);
 }
