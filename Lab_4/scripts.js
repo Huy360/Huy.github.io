@@ -1,4 +1,5 @@
 let myFullName = "Huy Nguyen"; // 9 characters in name...not including space
+
 // 1 Change the content of the div with class "header" to "[Your name]'s Lab 4"
 document.querySelector(".header").innerHTML = myFullName + "\'s Lab 4\n";
 // 2 Insert two paragraphs into the div with the class "content"
