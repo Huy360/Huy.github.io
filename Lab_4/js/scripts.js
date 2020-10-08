@@ -1,36 +1,35 @@
 let fullName = "Huy Nguyen"; // 9 characters in name...not including space
 
 // 1 Change the content of the div with class "header" to "[Your name]'s Lab 4"
-document.querySelector(".header").innerHTML = fullName + "\'s Lab 4\n";
+let header = document.querySelector(".header");
+header.innerHTML = fullName + "'s Lab 4 ";
 
 // 2 Insert two paragraphs into the div with the class "content"
 //  Label each paragraph with a distinct class name
-var newParagraphOne = document.createElement("p1");
-var newParagraphTwo = document.createElement("p2");
-var newParagraphOneText = document.createTextNode("The first new paragraph. \n");
-var newParagraphTwoText = document.createTextNode("The second new paragraph. \n");
-
-newParagraphOne.appendChild(newParagraphOneText);
-newParagraphTwo.appendChild(newParagraphTwoText);
-
-var newContentParagraphs = document.querySelector(".content");
-newContentParagraphs.appendChild(newParagraphOne);
-newContentParagraphs.appendChild(newParagraphTwo);
+let paragraph1 = document.createElement("p1"); 
+let paragraph2 = document.createElement("p2");
+paragraph1.className = "content1";
+paragraph2.className = "content2"; 
+let newParagraphs = document.querySelector(".content");
+newParagraphs.append(paragraph1);
+newParagraphs.append(paragraph2);
 
 // 3 Into the first paragraph, insert the phrase "my name has " length of your name " characters"
 //      (e.g. my name has 10 characters).
-var newPhrase = "My name has " + fullName.length + " characters.";
-newParagraphOne.append(newPhrase);
+let lengthName = document.createTextNode("My name has "+ fullName.length+" characters");
+paragraph1.append(lengthName);
 
 // 4 & 5 Into the second paragraph tag, return the 3rd character in your first name
-var thirdCharacterInFullName = fullName.charAt(2);
+let thirdChar = document.createTextNode(fullName.charAt(2).toUpperCase());
+paragraph2.append(thirdChar);
 
 // 6 Add a new line to your second paragraph
-newParagraphTwo.append("\n");
+let newbreak = document.createElement("br");
+paragraph2.append(newbreak);
 
 // 7 Return the final three characters of your last name to that new line
-var finalThreeCharactersInFullName = fullName.substring(fullName.length - 3, fullName.length);
-newParagraphTwo.append(finalThreeCharactersInFullName);
+let lastLetters = document.createTextNode(fullName.substr(-3));
+paragraph2.append(lastLetters);
 
 // 8 Substring your first and last name into two separate variables
 var firstName = fullName.substring(0, 3);
