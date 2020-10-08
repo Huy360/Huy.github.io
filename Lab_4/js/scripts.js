@@ -33,7 +33,7 @@ paragraph2.append(lastLetters);
 
 // 8 Substring your first and last name into two separate variables
 var firstName = fullName.substring(0, 3);
-var lastName = fullName.substring(13, 18);
+var lastName = fullName.substring(5, 10);
 
 // 9 Add the total length of your first and last names together
 var nameLength = firstName.length + lastName.length;
