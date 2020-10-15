@@ -257,14 +257,12 @@ function countryDisplay() {
     orderList.innerHTML = " ";
     randomArray(listCountries);
     const shuffledlistCountries = listCountries.slice(0, 25);
-    const display1 = shuffledlistCountries.map((country) => 
-    {
+    const display1 = shuffledlistCountries.map((country) => {
         const li = document.createElement("li");
         li.innerHTML = "<strong>" + country.code + "</strong>" + " ";
         li.append(country.name);
         orderList.appendChild(li);
-    }
-    );
+    });
 }
 function randomArray(p) {
     for (let a = p.length - 1; a > 0; a--) {
