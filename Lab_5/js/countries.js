@@ -1,5 +1,5 @@
 /* N.B. - For your lab, use the variable "countries" now available on the window space */
-const countriesCodeList = [
+const listCountries = [
   { name: "Afghanistan", code: "AF" },
   { name: "Åland Islands", code: "AX" },
   { name: "Albania", code: "AL" },
@@ -244,31 +244,35 @@ const countriesCodeList = [
   { name: "Zambia", code: "ZM" },
   { name: "Zimbabwe", code: "ZW" },
 ];
-console.log("List of countries in the world", countriesCodeList);
+console.log("List of countries in the world", listCountries);
 
-const showContent = document.querySelector(".content");
-const showButton = document.querySelector(".click");
-showButton.addEventListener("click", countryDisplay);
-const orderList = document.createElement("ol");
-orderList.className = "countries";
-showContent.appendChild(orderList);
+let myContent = document.querySelector(".content"); 
+let orderList = document.createElement("ol"); 
+myContent.appendChild(orderList); 
+orderList.className = "countries"; 
+const myButton = document.querySelector("button"); 
+myButton.addEventListener("click",countryDisplay); 
 
 function countryDisplay() {
-    orderList.innerHTML = " ";
-    randomArray(countriesCodeList);
-    const shuffledCountriesCodeList = countriesCodeList.slice(0, 25);
-    const display1 = shuffledCountriesCodeList.map((country) => 
-    {
-        const li = document.createElement("li");
-        li.innerHTML = "<strong>" + country.code + "</strong>" + " ";
-        li.append(country.name);
-        orderList.appendChild(li);
-    }
-    );
+  orderList.innerHTML = " "; 
+  shuffleArray(listCountries); 
+  const shufArray = listCountries.slice(0, 25); 
+  let sortArray = shufArray.sort();
+
+  let map = sortArray.map(countries); 
+  function countries(ctr){
+    var li = document.createElement("li");
+    li.innerHTML = ctr.name + ", " + "<b>" + ctr.code + "</b>";
+    orderList.appendChild(li);
+  };
 }
-function randomArray(random) {
-    for (let a = random.length - 1; a > 0; a--) {
-      const b = Math.floor(Math.random() * (a + 1));
-      [random[a], random[b]] = [random[b], random[a]];
-    }
+function shuffleArray(p) {
+  for (let i = p.length - 1; i > 0; i--) {
+      const k = Math.floor(Math.random() * (i + 1));
+      [p[i], p[k]] = [p[k], p[i]];
   }
+  return p;
+}
+
+
+
