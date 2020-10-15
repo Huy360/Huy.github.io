@@ -255,18 +255,18 @@ showContent.appendChild(orderList);
 
 function countryDisplay() {
     orderList.innerHTML = " ";
-    shuffleArray(countriesCodeList);
+    randomArray(countriesCodeList);
     const shuffledCountriesCodeList = countriesCodeList.slice(0, 25);
-    
-    const display1 = shuffledCountriesCodeList.map((country) => {
+    const display1 = shuffledCountriesCodeList.map((country) => 
+    {
         const li = document.createElement("li");
         li.innerHTML = "<strong>" + country.code + "</strong>" + " ";
         li.append(country.name);
         orderList.appendChild(li);
-    });
+    }
+    );
 }
-
-function shuffleArray(array) {
+function randomArray(array) {
     for (let a = array.length - 1; a > 0; a--) {
       const b = Math.floor(Math.random() * (a + 1));
       [array[a], array[b]] = [array[b], array[a]];
