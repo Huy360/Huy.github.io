@@ -266,9 +266,9 @@ function countryDisplay() {
     }
     );
 }
-function randomArray(array) {
-    for (let a = array.length - 1; a > 0; a--) {
+function randomArray(random) {
+    for (let a = random.length - 1; a > 0; a--) {
       const b = Math.floor(Math.random() * (a + 1));
-      [array[a], array[b]] = [array[b], array[a]];
+      [random[a], random[b]] = [random[b], random[a]];
     }
   }
