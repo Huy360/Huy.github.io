@@ -259,8 +259,7 @@ function countryDisplay() {
     const shuffledlistCountries = listCountries.slice(0, 25);
     const display1 = shuffledlistCountries.map((country) => {
         const li = document.createElement("li");
-        li.innerHTML = "<strong>" + country.code + "</strong>" + " ";
-        li.append(country.name);
+        li.innerHTML = country.name + ", " + "<b>" + country.code + "</b>";
         orderList.appendChild(li);
     });
 }
