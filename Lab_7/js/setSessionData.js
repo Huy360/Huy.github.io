@@ -13,17 +13,11 @@ function getBusRoute() {
       })
       .then((route) => {
         // YOUR CODE HERE
-        let title = route.title;
-        let lat_max = route.lat_max;
-        let lat_min = route.lat_min;
-        let lon_max = route.lon_max;
-        let lon_min = route.lon_min;
-
-        sessionStorage.setItem("title", title);
-        sessionStorage.setItem("lat_max", latMax);
-        sessionStorage.setItem("lat_min", latMin);
-        sessionStorage.setItem("lon_max", lonMax);
-        sessionStorage.setItem("lon_min", lonMin);
+        sessionStorage.setItem("title", route.title);   
+        sessionStorage.setItem("latMax", route.lat_max); 
+        sessionStorage.setItem("latMin", route.lat_min);
+        sessionStorage.setItem("lonMax", route.lon_max);
+        sessionStorage.setItem("lonMin", route.lon_min);
 
       })
       .catch((err) => {
@@ -32,5 +26,10 @@ function getBusRoute() {
       });
   } else {
     main.innerHTML = "No value provided";
+    sessionStorage.setItem("title", "Nothing Set");
+    sessionStorage.setItem("latMax", "Nothing set"); 
+    sessionStorage.setItem("latMin", "Nothing set");
+    sessionStorage.setItem("lonMax", "Nothing set");
+    sessionStorage.setItem("lonMin", "Nothing set");
   }
 }
