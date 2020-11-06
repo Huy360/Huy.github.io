@@ -1,10 +1,10 @@
 const main = document.getElementById("main");
 
 function getBusRoute() {
-  let busRoute = ""; // Your code here
+  let busRoute = document.getElementById("busRoute").value; // Your code here
 
   if ((typeof busRoute !== "undefined") & (busRoute !== "")) {
-    let busRouteURL = ""; // Your code here
+    let busRouteURL = "https://api.umd.io/v0/bus/routes/" + busRoute; // Your code here
 
     fetch(busRouteURL)
       .then((response) => {
@@ -12,6 +12,13 @@ function getBusRoute() {
       })
       .then((route) => {
         // YOUR CODE HERE
+        sessionStorage.setItem("routeItem", JSON.stringify(route));
+        let title = route.title;
+        let latMax = route.latMax;
+        let latMin = route.latMin;
+        let lonMax = route.lonMax;
+        let lonMin = route.lonMin;
+
       })
       .catch((err) => {
         console.log(err);
