@@ -75,4 +75,4 @@ async function makeChart() {
     chart.render();
 }
 
-window.onload = makeChart();
+window.onload = makeChart;
