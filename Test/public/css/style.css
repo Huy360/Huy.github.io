@@ -1,0 +1,234 @@
+html, body {
+    display: flex;
+    background-color: #ffffff;
+    margin: 0;
+    height:100%;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+
+.header{
+    display: flex;
+    flex-direction: row; /*Move items through the row */
+    justify-content: center; /* Controls what happens in spce so center shit*/
+    width: 100%; /*probably unecessary */
+    background-color: #A73838;
+    text-shadow: -1px 0 #FFFF03, 0 1px #FFFF03, 1px 0 #FFFF03, 0 -1px #FFFF03;/*outline of letters */
+    font-family: 'Playfair Display', serif;
+    color: #E4E4E4;
+    font-size: 15px;
+}
+/*  */
+.himg{
+    width:70px;
+    height:70px;
+    padding: 5px; 
+}
+
+/* https://www.w3schools.com/howto/howto_css_vertical_menu.asp*/
+.vertical-menu {
+    display: flex;
+    flex-direction: column;
+    width: 15%; /* Set a width if you like */
+    height: 100%;
+  }
+  
+  .vertical-menu a, b {
+    background-color: #A73838; /*background color */
+    color: #ffffff; /*text color */
+    display: block; /* Make the links appear below each other */
+    padding: 12px; /* Add some padding */
+    text-align: center;
+    text-decoration: none; /* Remove underline from links */
+  }
+
+  .vertical-menu a{
+    box-sizing: border-box;
+    flex-basis: 20%; /*Evenly space links */
+  }
+
+  .vertical-menu a.nimg img{
+      flex: 2;
+      height: 100%;
+      width: 100%;
+  }
+
+  .vertical-menu a.not{
+      flex: 1;
+  }
+/* 
+https://www.w3schools.com/howto/howto_css_center-vertical.asp
+https://www.w3schools.com/cssref/pr_pos_top.asp
+*/
+
+/*positioning*/
+#map{
+    display: flex;
+    min-height: 400px;
+    width : 50%;
+    flex: 1;
+    flex-direction: column; 
+    background-color: rgb(233, 243, 243) ;
+    text-align: center;
+    justify-content: space-around;
+    align-items: center;
+    margin:10px;
+}
+
+
+/*ATTEMPTING TO RESIZE CONTENT WITHIN CONTAINER AGUHHUUDHHDJFHJ*/
+#api{
+    min-height: 400px;
+    max-width: 100%;
+    width: 35%;
+    height: auto;
+}
+
+.mimg{
+    min-height: 400px;
+    max-width: 100%;
+    width: 35%;
+    height: auto;
+}  
+
+/*Right, Drop Down*/
+.dropbtn {
+  background-color: #000000;
+  color: #FFD700;
+  padding: 16px;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-menu-center {
+    left: 50% !important;
+    right: auto !important;
+    text-align: center !important;
+    transform: translate(-50%, 0) !important;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color:#FFD700;}
+.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropbtn {background-color: #000000;}
+
+/* NEED TO CREATE SOME TYPE OF MEDIA FOR WHEN THE SCREEN GETS TOO SMALL */
+ /*Trash section
+
+
+
+
+
+      display: flex;
+    flex-direction: column; 
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 600px;
+   
+   flex-direction: column; 
+    text-align: center;
+    justify-content: space-around;
+    align-items: center;
+    margin:10px;
+ text-align: center;
+display: inline-block;
+width: 100%;
+text-align: center;
+    min-height: 400px;
+    width : 50%;
+
+
+/* Not sure what this is for. Left it in just in case it's important 
+	body{
+		background-color:#ffff;
+		font:1em sans-serif;  
+		border-left: 180px solid red;
+		border-top: 80px solid red; 
+		border-color: #c94f4f;  
+	}
+
+	form{
+		margin: 0 auto;
+		width: 30%;
+		padding: 2em;
+			text-align:left;
+		
+	}
+	h1{
+		text-align:center;
+	}
+	ul{
+		list-style:none;
+		padding:0;
+		margin:0;
+	}
+
+	form li + li {
+		margin-top: 3em;
+	}
+	label{
+		display: inline-block;
+
+	}
+	input, textarea{
+		font: 1em sans-serif;
+		width:300px;
+		box-sizing: border-box;
+		border: 1px solid #4d79ff;
+		border-radius: 5px;
+	}
+	input:focus, textarea:focus {
+		border-color:#17202A;
+	}
+	textarea{
+		vertical-align: top;
+		height: 5em;
+		
+	}
+
+	button{
+		background-color:#4d79ff;
+		margin-left:.5em;
+		text-align:left;
+		border-radius: 5px;
+	}
+*/
+
+
+/* trying to style the privacy page*/
+.privacy_box {
+  display: flex;
+  justify-content: center;
+  
+  background-color: #ffffff;
+  flex-grow: 3;
+}
+
+.privacy_text {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
